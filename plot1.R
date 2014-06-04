@@ -11,9 +11,6 @@ header <- read.table("data/household_power_consumption.txt",
 PowerConsum <- read.table(pipe('grep \'^[12]/2/2007\' data/*'), 
                           sep=";", na.strings="?", col.names=header)
 
-# PowerConsum$DateTime <- as.Date(strptime(
-#     paste(PowerConsum$Date, PowerConsum$Time, sep = " "),
-#     format = "%d/%m/%Y %H:%M:%S"))
 
 
 ## Histogram "Global Active Power"
